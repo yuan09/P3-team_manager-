@@ -20,6 +20,7 @@ public class Programmer extends Employee{
     public Programmer(int id, String name, int age, double salary, Equipment equipment) {
         super(id, name, age, salary);
         this.equipment = equipment;
+        this.status = Status.FREE;
     }
 
     public int getMemberid() {
@@ -48,10 +49,10 @@ public class Programmer extends Employee{
 
     @Override
     public String toString() {
-        return "Programmer{" +
-                "memberid=" + memberid +
-                ", status=" + status +
-                ", equipment=" + equipment +
-                '}';
+        return getInfo()+ "\t程序员\t"+ getStatus() + "\t\t\t\t" + getEquipment().getDescription();
+    }
+
+    public String memberInfo(){
+        return "/"+getId()+getInfo()+ "\t程序员\t";
     }
 }

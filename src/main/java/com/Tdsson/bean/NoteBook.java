@@ -10,6 +10,7 @@ public class NoteBook implements Equipment {
     }
 
     public String getDescription() {
-        return null;
+        return "\t"+ model+"("+price+")";
     }
+
 }

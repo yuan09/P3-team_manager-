@@ -49,9 +49,13 @@ public class Employee {
         this.salary = salary;
     }
 
-
+    //ID	姓名	年龄	工资	职位	状态	奖金	股票	领用设备
     @Override
     public String toString() {
-        return id + name + age + salary；
+        return getInfo();
+    }
+
+    public String getInfo(){
+        return id + "\t" + name + "\t "+  age + "  \t" + salary;
     }
 }

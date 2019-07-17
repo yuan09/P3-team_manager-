@@ -1,10 +1,10 @@
 package com.Tdsson.bean;
 
-public class Architect extends Programmer{
+public class Architect extends Designer{
     private int stock;//股票数
 
-    public Architect(int id, String name, int age, double salary, Equipment equipment, int stock) {
-        super(id, name, age, salary, equipment);
+    public Architect(int id, String name, int age, double salary, Equipment equipment, double bonus, int stock) {
+        super(id, name, age, salary, equipment, bonus);
         this.stock = stock;
     }
 
@@ -16,5 +16,12 @@ public class Architect extends Programmer{
         this.stock = stock;
     }
 
+    @Override
+    public String toString() {
+        return getInfo() + "\t架构师\t" + getStatus() + "\t" +getBonus()+"\t"+stock + getEquipment().getDescription();
+    }
 
+    public String memberInfo(){
+        return "/"+getId()+getInfo()+ "\t架构师\t"+getBonus()+"\t"+stock;
+    }
 }

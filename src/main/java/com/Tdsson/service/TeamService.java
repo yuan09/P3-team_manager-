@@ -1,6 +1,7 @@
 package com.Tdsson.service;
 
 import com.Tdsson.bean.Employee;
+import com.Tdsson.bean.PC;
 import com.Tdsson.bean.Programmer;
 
 public class TeamService {
@@ -11,7 +12,8 @@ public class TeamService {
 
     //返回当前团队所有对象
     public  Programmer[] getTeam(){
-        return null;
+        team[0] = new Programmer(1,"唐德松",21,5000,new PC("1","2"));
+        return team;
     }
    //向团队中添加成员 异常添加失败
 //    public  void addMember(Employee e) throws TeamException{

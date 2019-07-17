@@ -26,6 +26,6 @@ public class Printer implements Equipment {
     }
 
     public String getDescription() {
-        return null;
+        return "\t" + type +"("+name+")";
     }
 }

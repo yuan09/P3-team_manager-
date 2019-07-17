@@ -26,6 +26,7 @@ public class PC implements Equipment {
     }
 
     public String getDescription() {
-        return null;
+        return "\t" + model+"("+display+")";
     }
+
 }
